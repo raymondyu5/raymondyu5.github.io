@@ -3,46 +3,18 @@ layout: default
 title: Home
 ---
 <!-- ========== BIO ========== -->
-<div class="docs-section" id="bio">
+<div class="docs-section" id="About Me">
   <h4>Bio</h4>
   <p>
-  My research develops tools for analyzing <b>large-scale social data</b>, aiming to provide a better understanding of <b>social structure and behaviors</b> online while also impacting the <b>design of digital social systems</b>. 
-  My recent work has focused on reducing political polarization online 
-  [<a href="assets/publications/2022_newsbridge/paper.pdf" target="_blank">ICWSM'22a</a>,
-  <a href="assets/publications/2022_flipfeed/paper.pdf" target="_blank">ICWSM'22b</a>,
-  <a href="assets/publications/2021_balanced_inf_max/paper.pdf" target="_blank">WSDM'21</a>,
-  <a href="assets/publications/2018_social_mirror/paper.pdf" target="_blank">WWW'18</a>],
-  improving the health of online conversations 
-  [<a href="assets/publications/2021_dtox/paper.pdf" target="_blank">WWW'21</a>, 
-  <a href="assets/publications/2021_social_catalysts/paper.pdf" target="_blank">CSCW'21</a>], 
-  and causal inference in social systems 
-  [<a href="assets/publications/2017_detecting_network_effects/paper.pdf" target="_blank">KDD'17</a>
-  <a href="assets/publications/2019_biometrika/paper.pdf" target="_blank">Biometrika'19</a>]. 
-  My research often falls at the intersections of Social Networks, Machine Learning, and Causal Inference.
+    Hey there! I am a third year undergraduate studying computer science at the <a href="https://www.cs.washington.edu/" target="_blank">Allen School</a> in the <a href="https://www.washington.edu/" target="_blank">University of Washington, Seattle</a>. 
+    I am fortunate to be advised by <a href="https://homes.cs.washington.edu/~abhgupta/" target="_blank">Abhishek Gupta</a> in the <a href="https://weirdlab.cs.washington.edu/index.html" target="_blank">WEIRD Lab</a>. 
+    My research interests are in robotics, reinforcement learning, and computer vision. 
+    As of recently, I have been working on bridging the sim2real gap and open sourcing VLA models. 
+    I am also a part-time student researcher on the <a href="https://prior.allenai.org/" target="_blank">PRIOR</a> team at the <a href="https://allenai.org/" target="_blank">Allen Institute for AI</a> where I work on computer vision based projects.
   </p>
-
   <p>
-  I'm an Assistant Professor in the Information School at the University of Washington.
-  Before joining UW, I was a Postdoc at Stanford University, mentored by <a href="https://web.stanford.edu/~jugander/" target="_blank">Johan Ugander</a>.
-  I received my Ph.D. from MIT in 2020 under the supervision of Deb Roy. 
-  Prior to coming to MIT, I spent one year in Paris and one year in Barcelona doing a M.Sc. in Data mining and Knowledge Management. 
-  I got my B.Sc. from Staffordshire University with First Class honors in Computer Science. 
-  Throughout my graduate studies, I spent several summers doing internships in industry, including Yahoo! Labs, Amazon, LinkedIn, and Facebook.
-  </p> 
-</div>
-
-<div class="docs-section" id="prospective-students">  
-  <h4>Prospective Students</h4>
-  <p>
-  <b>I'm recruiting PhD students to start Fall 2024 at the University of Washington! </b> 
-  I'm looking for students passionate about using computational methods to study how social platforms can be reimagined to <u>enable better conversations, bridge political divides, and reduce the spread of misinfo</u>.
-  I'm particularly interested in the <u>role of algorithms</u> in social platforms.
-  I'm especially looking for students with a background and/or interest in <u>social network analysis, machine learning, causal inference, or natural language processing</u>.
-  <br/>
-  If you are interested, please apply to the UW iSchool <a href="https://ischool.uw.edu/programs/phd/admissions" target="_blank">PhD program</a> and mention me in your application.
-  <br/>
-  If you have any questions, feel free to reach out.
-  </p> 
+    Outside of work, I enjoy swimming, going on mindless grocery runs, and also trying out new food. Feel free to contact me, let's chat!
+  </p>
 </div>
 
 
@@ -50,11 +22,12 @@ title: Home
 <div class="docs-section" id="publications">
   <h4>Publications</h4>
 
-  <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>.<br/>
+  <p> Coming <i> very </i> soon! A few papers are currently in submission and preperation.
+  <!-- <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>.<br/>
   <sup>‡</sup> indicates equal contribution.
-  </p>
+  </p> -->
 
-  <ul class="tab-nav">
+  <!-- <ul class="tab-nav">
     <li><div class="button active" data-ref="#papers-selected">Selected</div></li>
     <li><div class="button" data-ref="#papers-all">All</div></li>
   </ul>
@@ -95,9 +68,9 @@ title: Home
           </div>
         </div>
       {% endfor %}
-    </div>
+    </div> -->
 
-    <div class="tab-pane" id="papers-all">
+    <!-- <div class="tab-pane" id="papers-all">
       {% for paper in site.data.publications.papers %}
         <div class="paper">
           <p class="title"><b>{{ paper.title }}</b></p>
@@ -132,7 +105,7 @@ title: Home
         </div>
       {% endfor %}
     </div>
-  </div>
+  </div> -->
 </div>
 
 <!-- ========== PROJECTS ========== 
@@ -235,18 +208,3 @@ title: Home
     {% endfor %}
   </ul>
 </div>
-
-<div class="docs-section" id="template">
-  <h4>Website Design</h4>
-  Since I made this website, many people have found this Jekyll template useful [
-  {% for template_user in site.data.template_users.template_users %}
-  <a href="{{ template_user }}" target="_blank">{{ forloop.index }}</a>{% if forloop.last %}{% else %},{% endif %}
-  {% endfor %}
-  ].
-  <!--<br/>-->
-  You can find all the code needed to build your website in this <a href="https://github.com/msaveski/www_personal" target="_blank">GitHub repo</a>.
-  Feel free to use it. <br/>
-
-  If you end up using it, please link to here and drop me an email.
-  I'm always happy to see people using it.
-</div>  
