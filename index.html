@@ -2,27 +2,82 @@
 layout: default
 title: Home
 ---
+<!-- Adding Custom Styles -->
+<style>
+  body {
+    font-family: 'Arial', sans-serif; /* Change the font to Arial */
+    color: #2c3e50; /* A dark blue-gray for the body text */
+  }
+
+  h4 {
+    font-family: 'Georgia', serif; /* Use Georgia for headings */
+    color: #1a5276; /* A deeper blue for headings */
+  }
+
+  p {
+    font-family: 'Arial', sans-serif; /* Use Arial for paragraph text */
+    color: #34495e; /* A neutral blue-gray for paragraphs */
+  }
+
+  a {
+    color: #3498db; /* A bright blue for links */
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .news-date {
+    color: #1f618d; /* A slightly lighter blue for news dates */
+    font-weight: bold;
+  }
+
+  ul li {
+    margin-bottom: 10px;
+  }
+</style>
+
 <!-- ========== BIO ========== -->
-<div class="docs-section" id="About Me">
-  <h4>Bio</h4>
+<div class="docs-section" id="aboutme">
+  <h4>About Me</h4>
   <p>
     Hey there! I am a third year undergraduate studying computer science at the <a href="https://www.cs.washington.edu/" target="_blank">Allen School</a> in the <a href="https://www.washington.edu/" target="_blank">University of Washington, Seattle</a>. 
     I am fortunate to be advised by <a href="https://homes.cs.washington.edu/~abhgupta/" target="_blank">Abhishek Gupta</a> in the <a href="https://weirdlab.cs.washington.edu/index.html" target="_blank">WEIRD Lab</a>. 
-    My research interests are in robotics, reinforcement learning, and computer vision. 
-    As of recently, I have been working on bridging the sim2real gap and open sourcing VLA models. 
-    I am also a part-time student researcher on the <a href="https://prior.allenai.org/" target="_blank">PRIOR</a> team at the <a href="https://allenai.org/" target="_blank">Allen Institute for AI</a> where I work on computer vision based projects.
+    My broad research interests are in robotics, reinforcement learning, and computer vision.  Recently, I've been focused on reducing the need for manual data collection to 
+    enable scalable robot learning for long-horizon, diverse, and complex tasks.
+    At the <a href="https://allenai.org/" target="_blank">Allen Institute for AI</a>, I work on the <a href="https://prior.allenai.org/" target="_blank">PRIOR</a> team as a student researcher.
   </p>
   <p>
-    Outside of work, I enjoy swimming, going on mindless grocery runs, and also trying out new food. Feel free to contact me, let's chat!
+    Alongside my research, I enjoy teaching and mentoring. I currently serve as a Teaching Assistant for CSE311 (Discrete Mathematics). Previously, I tutored Calculus and Linear Algebra 
+    at the UW Math Study Center alongside serving as a Teaching Assistant for the Saturday 
+    Enrichment Program at the UW Robinson Center, where I led sessions in neuroscience, robotics, computing, and physics.
+  </p>
+  <p>
+    Outside of work, I enjoy swimming, going on mindless walks, and also trying out new food. Feel free to contact me, let's chat!
   </p>
 </div>
 
+<!-- ========== News ========== -->
+<div class="docs-section" id="news">
+  <h4>News</h4>
+  <ul>
+    <li>
+      <span class="news-date">[Jun. 2024]</span>&nbsp;&nbsp;
+      I joined <b>WEIRD Lab @ UW</b> as an AI robotics research assistant!
+    </li>
+    <li>
+      <span class="news-date">[Jan. 2024]</span>&nbsp;&nbsp;
+      I joined <b>the Allen Institute for AI @ UW</b> as a student researcher on the PRIOR team!
+    </li>
+  </ul>
+</div>
 
 <!-- ========== PUBLICATIONS ========== -->
 <div class="docs-section" id="publications">
   <h4>Publications</h4>
 
-  <p> Coming <i> very </i> soon! A few papers are currently in submission and preperation.
+  <p> Coming <b> <i> very </i> </b> soon! A few papers are currently in submission or preperation.
   <!-- <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>.<br/>
   <sup>‡</sup> indicates equal contribution.
   </p> -->
