@@ -6,7 +6,7 @@ papers:
     image: "/assets/publications/uwm_teaser.png"
     website: "https://weirdlabuw.github.io/uwm/"
     selected: y
-  - title: "DRAWER: Dataset and Benchmark for Articulated Scene Understanding"
+  - title: "DRAWER: Digital Reconstruction and Articulation With Environment Realism"
     authors: "Hongchi Xia, Entong Su, Marius Memmel, Arhan Jain, <b>Raymond Yu</b>, Numfor Mbiziwo-Tiapo, Ali Farhadi, Abhishek Gupta, Shenlong Wang, Wei-Chiu Ma"
     venue: "CVPR 2025"
     image: "/assets/publications/drawer_teaser.png"
