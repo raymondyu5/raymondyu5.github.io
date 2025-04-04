@@ -6,14 +6,11 @@ papers:
     image: "/assets/publications/uwm_teaser.png"
     website: "https://weirdlabuw.github.io/uwm/"
     selected: y
-
   - title: "DRAWER: Dataset and Benchmark for Articulated Scene Understanding"
     authors: "Hongchi Xia, Entong Su, Marius Memmel, Arhan Jain, Raymond Yu, Numfor Mbiziwo-Tiapo, Ali Farhadi, Abhishek Gupta, Shenlong Wang, Wei-Chiu Ma"
     venue: "CVPR 2025"
-    # paper_pdf: "/assets/publications/drawer2025.pdf"
     image: "/assets/publications/drawer_teaser.png"
     selected: y
-
   - title: "HAMSTER: Hierarchical Action Models For Open-World Robot Manipulation"
     authors: "Yi Li, Yuquan Deng, Jesse Zhang, Joel Jang, Marius Memmel, Raymond Yu, Caelan Garrett, Fabio Ramos, Dieter Fox, Anqi Li, Abhishek Gupta, Ankit Goyal"
     venue: "ICLR 2025"
@@ -21,11 +18,9 @@ papers:
     website: "https://hamster-robot.github.io/"
     image: "/assets/publications/hamster_teaser.png"
     selected: y
-
   - title: "OPTIMUS: Observing Persistent Transformations in Multi-temporal Unlabeled Satellite-data"
     authors: "Raymond Yu, Paul Han, Piper Wolters, and Favyen Bastani"
     venue: "WACV 2025"
     paper_pdf: "https://openaccess.thecvf.com/content/WACV2025/papers/Yu_OPTIMUS_Observing_Persistent_Transformations_in_Multi-Temporal_Unlabeled_Satellite-Data_WACV_2025_paper.pdf"
     image: "/assets/publications/optimus_teaser.png"
     selected: y
-
