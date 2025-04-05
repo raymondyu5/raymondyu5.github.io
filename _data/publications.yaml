@@ -19,7 +19,7 @@ papers:
     image: "/assets/publications/hamster_teaser.png"
     selected: y
   - title: "OPTIMUS: Observing Persistent Transformations in Multi-temporal Unlabeled Satellite-data"
-    authors: "<b>Raymond Yu</b>, Paul Han, Piper Wolters, and Favyen Bastani"
+    authors: "<b>Raymond Yu</b>, Paul Han, Piper Wolters, Favyen Bastani"
     venue: "WACV 2025"
     paper_pdf: "https://openaccess.thecvf.com/content/WACV2025/papers/Yu_OPTIMUS_Observing_Persistent_Transformations_in_Multi-Temporal_Unlabeled_Satellite-Data_WACV_2025_paper.pdf"
     image: "/assets/publications/optimus_teaser.png"
