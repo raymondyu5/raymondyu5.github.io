@@ -1,7 +1,7 @@
 papers:
   - title: "Unified World Models"
     authors: "Chuning Zhu, <b>Raymond Yu</b>, Siyuan Feng, Benjamin Burchfiel, Paarth Shah, Abhishek Gupta"
-    venue: "RSS 2025 (under review)"
+    venue: "arXiv"
     code: "https://github.com/WEIRDLabUW/unified-world-model"
     image: "/assets/publications/uwm_teaser.png"
     website: "https://weirdlabuw.github.io/uwm/"
