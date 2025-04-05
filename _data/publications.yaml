@@ -1,5 +1,5 @@
 papers:
-  - title: "Unified World Models for Embodied Agents"
+  - title: "Unified World Models"
     authors: "Chuning Zhu, <b>Raymond Yu</b>, Siyuan Feng, Benjamin Burchfiel, Paarth Shah, Abhishek Gupta"
     venue: "RSS 2025 (under review)"
     code: "https://github.com/WEIRDLabUW/unified-world-model"
