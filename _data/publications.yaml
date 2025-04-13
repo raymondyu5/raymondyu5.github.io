@@ -10,6 +10,7 @@ papers:
     authors: "Hongchi Xia, Entong Su, Marius Memmel, Arhan Jain, <b>Raymond Yu</b>, Numfor Mbiziwo-Tiapo, Ali Farhadi, Abhishek Gupta, Shenlong Wang, Wei-Chiu Ma"
     venue: "CVPR 2025"
     image: "/assets/publications/drawer_teaser.png"
+    website: "https://xiahongchi.github.io/DRAWER/"
     selected: y
   - title: "HAMSTER: Hierarchical Action Models For Open-World Robot Manipulation"
     authors: "Yi Li, Yuquan Deng, Jesse Zhang, Joel Jang, Marius Memmel, <b>Raymond Yu</b>, Caelan Garrett, Fabio Ramos, Dieter Fox, Anqi Li, Abhishek Gupta, Ankit Goyal"
