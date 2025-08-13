@@ -1,18 +1,26 @@
 h4 {
   letter-spacing: .1rem; }
 .container {
-  max-width: 800px; }
-.header {
-  margin-top: 60px;
-  margin-bottom: 60px; 
-  text-align: left; }
-.main-description h1 {
-  margin-bottom: 0px; }
-.main-description p {
-  margin-bottom: 0px; }
-.main-description .fa {
-  font-size: 22px;
-  margin-top: 5px; }
+  max-width: 950px;
+  padding: 0 30px; }
+/* Bigger social media icons */
+.main-description .fa,
+.main-description .ai {
+  font-size: 32px;
+  margin: 8px 12px 8px 0;
+  color: #7f8c8d;
+  transition: all 0.2s ease;
+  padding: 8px;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.main-description .fa:hover,
+.main-description .ai:hover {
+  color: #4a4a4a;
+  background: #f1f3f4;
+  transform: translateY(-1px);
+}
 .paper {
   margin-bottom: 20px }
 .paper .title {
@@ -94,7 +102,8 @@ h4 {
   .navbar-spacer {
     display: none; }
   .navbar > .container {
-    width: 100%; }
+    width: 100%;
+    padding: 0 30px; }
   .navbar-list {
     list-style: none;
     margin-bottom: 0; }
@@ -121,7 +130,8 @@ h4 {
     display: block; }
   /* Re-overiding the width 100% declaration to match size of % based container */
   .has-docked-nav .navbar > .container {
-    width: 80%; }
+    width: 100%;
+    padding: 0 30px; }
 
   /* Popover */
   .popover.open {
@@ -190,4 +200,746 @@ h4 {
   .popover-link:hover,
   .popover-item:first-child .popover-link:hover:after {
     border-bottom-color: #33C3F0; }
+}
+
+/* ================ Clean & Professional Design ================ */
+
+/* Reduced section spacing */
+.docs-section {
+  border-top: 1px solid #eee;
+  padding: 2.5rem 0; /* Reduced from 4rem */
+  margin-bottom: 0;
+}
+
+/* Subtly enhanced header styling */
+.header {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: left;
+  position: relative;
+  padding: 40px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* Subtly enhanced profile image */
+.header .three.columns img {
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+  border: 2px solid #f1f3f4;
+}
+
+.header .three.columns img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+}
+
+/* Enhanced but subtle name styling - consistent across all pages */
+.main-description h1,
+.header h1,
+.header .main-description h1 {
+  color: #2c3e50 !important;
+  font-weight: 600 !important;
+  margin-bottom: 5px !important;
+  font-size: 4rem !important;
+  position: relative;
+  letter-spacing: -0.3px !important;
+}
+
+.main-description h1:after,
+.header h1:after,
+.header .main-description h1:after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #4a4a4a;
+  border-radius: 1px;
+}
+
+/* Ensure consistent paragraph styling in header */
+.main-description p,
+.header .main-description p {
+  margin-bottom: 8px !important;
+}
+
+/* Bigger title/subtitle */
+.main-description p:first-of-type {
+  font-size: 1.6rem;
+  color: #5a6c7d;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Bigger email styling */
+.main-description p:nth-of-type(2) {
+  color: #7f8c8d;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+/* Enhanced paper styling with subtle effects */
+.paper {
+  margin-bottom: 25px;
+  padding: 18px;
+  background: #fff;
+  border-radius: 6px;
+  border-left: 3px solid #e9ecef;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.paper:hover {
+  border-left-color: #4a4a4a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+/* Clean section headers */
+h4 {
+  letter-spacing: .1rem;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+/* Fix scroll offset for fixed navbar */
+@media (min-width: 750px) {
+  .docs-section {
+    scroll-margin-top: 7rem; /* Account for navbar height + spacing */
+  }
+  
+  .docs-section h4 {
+    scroll-margin-top: 7rem;
+  }
+}
+
+h4:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #4a4a4a;
+  border-radius: 1px;
+}
+
+/* Refined buttons */
+.button {
+  background: #4a4a4a;
+  border: none;
+  color: white;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  font-weight: 400;
+}
+
+.button:hover {
+  background: #333333;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(74, 74, 74, 0.3);
+  color: white;
+}
+
+/* Clean project containers */
+.project-container {
+  margin-bottom: 25px;
+  transition: transform 0.2s ease;
+}
+
+.project-container:hover {
+  transform: translateY(-2px);
+}
+
+.project-image-container {
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 3px;
+  transition: 0.2s;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.project-image-container:hover {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border-color: rgba(74, 74, 74, 0.3);
+}
+
+/* ================ Compact Lecture Display ================ */
+
+/* Teaching section - make it more compact */
+#teaching .docs-section {
+  padding: 2rem 0; /* Even more compact for teaching section */
+}
+
+/* Course container styling */
+.course-container {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.course-header {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.course-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 4px;
+}
+
+.course-semester {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Lecture list styling */
+.lecture-list {
+  display: grid;
+  gap: 10px;
+}
+
+.lecture-item {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 12px 15px;
+  border-left: 3px solid #4a4a4a;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.lecture-item:hover {
+  background: #f0f0f0;
+  border-left-color: #333333;
+  transform: translateX(2px);
+}
+
+.lecture-title {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
+
+.lecture-description {
+  color: #5a6c7d;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.lecture-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.lecture-item a:hover {
+  color: inherit;
+}
+
+/* Responsive lecture grid */
+@media (min-width: 750px) {
+  .lecture-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .lecture-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+}
+
+/* Clean background - much more subtle */
+body {
+  background: #fafbfc;
+}
+
+.container {
+  background: #fff;
+  max-width: 950px;
+  padding: 20px 30px 0 30px;
+}
+
+/* Clean navbar */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.navbar-link {
+  color: #2c3e50;
+  transition: all 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #4a4a4a;
+}
+
+.navbar-link.active {
+  color: #4a4a4a;
+}
+
+/* Special styling for "Who Am I?" link - DeepMind style gradient */
+.navbar-link[href*="who_am_i"] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  position: relative;
+}
+
+.navbar-link[href*="who_am_i"]:hover {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: translateY(-1px);
+}
+
+.navbar-link[href*="who_am_i"]:before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar-link[href*="who_am_i"]:hover:before {
+  transform: scaleX(1);
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* ================ TIMELINE STORY PAGE STYLING ================ */
+
+.whoami-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.whoami-hero {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px 0;
+}
+
+.whoami-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.whoami-quote p {
+  font-size: 1.3rem;
+  color: #5a6c7d;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.whoami-quote span {
+  font-size: 1rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+/* Timeline Container */
+.timeline-container {
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Timeline Line */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: calc(100% - 140px); /* Stop before the back button area */
+  background: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+/* Timeline Sections */
+.timeline-section {
+  position: relative;
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInTimeline 0.8s ease forwards;
+}
+
+.timeline-section:nth-child(1) { animation-delay: 0.1s; }
+.timeline-section:nth-child(2) { animation-delay: 0.2s; }
+.timeline-section:nth-child(3) { animation-delay: 0.3s; }
+.timeline-section:nth-child(4) { animation-delay: 0.4s; }
+.timeline-section:nth-child(5) { animation-delay: 0.5s; }
+.timeline-section:nth-child(6) { animation-delay: 0.6s; }
+.timeline-section:nth-child(7) { animation-delay: 0.7s; }
+.timeline-section:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes fadeInTimeline {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Year Labels */
+.timeline-section::before {
+  content: attr(data-year);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* Timeline Content */
+.timeline-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.timeline-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.timeline-content.centered {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.timeline-content.centered .timeline-image-placeholder {
+  margin-bottom: 20px;
+}
+
+/* Timeline Text */
+.timeline-text {
+  flex: 1;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.timeline-text h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.timeline-text h3:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 1px;
+}
+
+.timeline-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 15px;
+}
+
+/* Image Placeholders */
+.timeline-image-placeholder {
+  flex: 0 0 300px;
+  height: 250px;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px dashed #dee2e6;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.image-placeholder:hover {
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  border-color: #adb5bd;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.image-placeholder span {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  opacity: 0.6;
+}
+
+.image-placeholder p {
+  font-size: 1rem;
+  color: #6c757d;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.image-placeholder small {
+  font-size: 0.85rem;
+  color: #868e96;
+  font-style: italic;
+}
+
+/* Timeline Images - constrain to fit properly */
+.timeline-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 2px solid #fff;
+}
+
+.timeline-image:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Better cropping for specific images */
+img[src*="today_tomorrow.jpg"],
+img[src*="human.JPG"] {
+  object-position: center 70%; /* Center horizontally, focus on center-lower to include more bottom */
+}
+
+/* Timeline Image Captions */
+.timeline-image-caption {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: rgba(102, 126, 234, 0.08);
+  border-radius: 6px;
+  border-left: 3px solid #667eea;
+  font-size: 0.9rem;
+  color: #4a5568;
+  font-style: italic;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Fun Facts in Timeline */
+.timeline-text .fun-fact {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  margin-top: 25px;
+}
+
+.timeline-text .fun-fact-icon {
+  font-size: 2rem;
+  min-width: 40px;
+}
+
+.timeline-text .fun-fact-content {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+.timeline-text .fun-fact-content strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* Timeline Interests */
+.interests-timeline {
+  margin-top: 25px;
+}
+
+.interest-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+.interest-item:last-child {
+  border-bottom: none;
+}
+
+.interest-emoji {
+  font-size: 2rem;
+  min-width: 40px;
+}
+
+.interest-item div strong {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.interest-item div p {
+  color: #5a6c7d;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Back Button with Gradient */
+.whoami-back {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.gradient-button {
+  display: inline-block;
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+  color: #fff;
+}
+
+.gradient-button:hover::before {
+  opacity: 1;
+}
+
+.gradient-button span,
+.gradient-button {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 750px) {
+  .whoami-title {
+    font-size: 2.2rem;
+  }
+  
+  .timeline-container::before {
+    left: 30px;
+  }
+  
+  .timeline-section::before {
+    left: 30px;
+    transform: none;
+  }
+  
+  .timeline-content,
+  .timeline-content.reverse {
+    flex-direction: column;
+    padding-left: 60px;
+  }
+  
+  .timeline-image-placeholder {
+    flex: none;
+    width: 100%;
+    height: 200px;
+  }
+  
+  .timeline-text {
+    width: 100%;
+  }
+  
+  .interest-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whoami-container {
+    padding: 0 10px;
+  }
+  
+  .timeline-content {
+    padding-left: 40px;
+  }
+  
+  .timeline-text {
+    padding: 20px;
+  }
+  
+  .gradient-button {
+    padding: 14px 30px;
+    font-size: 1rem;
+  }
 }

@@ -1,8 +1,42 @@
-source:      .
-destination: ./_site
-includes:    ./_includes
+# Site settings
+title: "Raymond Yu"
+description: "Personal academic website of Raymond Yu, Computer Science undergraduate at University of Washington"
+url: "https://raymondyu5.github.io"
 baseurl: ""
 
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+timezone: America/Los_Angeles
+
+# Jekyll configuration
+source: .
+destination: ./_site
+includes_dir: ./_includes
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+  - README.md
+
+# Collections (currently unused but keeping for future use)
 collections:
   projects:
-    output: true
+    output: false

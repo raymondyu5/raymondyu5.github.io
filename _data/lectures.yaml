@@ -1,0 +1,42 @@
+lectures:
+  - title: "Structure from Motion"
+    course: "CSE 455 - Computer Vision"
+    date: "Spring 2025"
+    description: "3D reconstruction techniques, bundle adjustment, and building 3D models from 2D image sequences."
+    slides: "https://courses.cs.washington.edu/courses/cse455/25sp/slides/13_structure_from_motion.pdf"
+    
+  - title: "Camera Geometry and Calibration"
+    course: "CSE 455 - Computer Vision"
+    date: "Spring 2025"
+    description: "Camera models, intrinsic and extrinsic parameters, and practical camera calibration techniques."
+    slides: "https://courses.cs.washington.edu/courses/cse455/25sp/slides/11_geometry_and_cameras.pdf"
+    
+  - title: "Homography and Geometric Transformations"
+    course: "CSE 455 - Computer Vision"
+    date: "Spring 2025"
+    description: "Understanding projective geometry, homography estimation, and applications in image rectification and panorama stitching."
+    slides: "https://courses.cs.washington.edu/courses/cse455/25sp/slides/08_descriptors_and_homography.pdf"
+    
+  - title: "Feature Descriptors and Matching"
+    course: "CSE 455 - Computer Vision"
+    date: "Spring 2025"
+    description: "Comprehensive overview of SIFT descriptors and robust feature matching techniques."
+    slides: "https://courses.cs.washington.edu/courses/cse455/25sp/slides/07_detectors_descriptors.pdf"
+    
+  - title: "Feature Detection: Lines and Corners"
+    course: "CSE 455 - Computer Vision"
+    date: "Spring 2025"
+    description: "Feature detection covering Harris corner detection."
+    slides: "https://courses.cs.washington.edu/courses/cse455/25sp/slides/06_lines_and_corners.pdf"
+    
+  - title: "Line Detection Algorithms"
+    course: "CSE 455 - Computer Vision"
+    date: "Spring 2025"
+    description: "Deep dive into Hough transforms and RANSAC."
+    slides: "https://courses.cs.washington.edu/courses/cse455/25sp/slides/05_detecting_lines.pdf"
+    
+  - title: "Derivatives and Edge Detection"
+    course: "CSE 455 - Computer Vision"
+    date: "Spring 2025"
+    description: "Fundamental edge detection techniques using mathematical foundations."
+    slides: "https://courses.cs.washington.edu/courses/cse455/25sp/slides/04_derivatives_and_edges.pdf"

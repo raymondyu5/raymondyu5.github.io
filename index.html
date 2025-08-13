@@ -2,67 +2,35 @@
 layout: default
 title: Home
 ---
-<!-- Adding Custom Styles -->
-<style>
-  body {
-    font-family: 'Arial', sans-serif;
-    /* Change the font to Arial */
-    color: #2c3e50;
-    /* A dark blue-gray for the body text */
-  }
-
-  h4 {
-    font-family: 'Georgia', serif;
-    /* Use Georgia for headings */
-    color: #1a5276;
-    /* A deeper blue for headings */
-  }
-
-  p {
-    font-family: 'Arial', sans-serif;
-    /* Use Arial for paragraph text */
-    color: #34495e;
-    /* A neutral blue-gray for paragraphs */
-  }
-
-  a {
-    color: #3498db;
-    /* A bright blue for links */
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  .news-date {
-    color: #1f618d;
-    /* A slightly lighter blue for news dates */
-    font-weight: bold;
-  }
-
-  ul li {
-    margin-bottom: 10px;
-  }
-</style>
 
 <!-- ========== BIO ========== -->
-<div class="docs-section" id="aboutme">
+<div class="docs-section" id="bio">
   <h4>About Me</h4>
+
   <p>
-    Hey there! I am a third year undergraduate studying computer science at the <a href="https://www.cs.washington.edu/"
+Hey there! I am a BS/MS student studying computer science at the <a href="https://www.cs.washington.edu/"
       target="_blank">Allen School</a> in the <a href="https://www.washington.edu/" target="_blank">University of
       Washington, Seattle</a>.
-    I am fortunate to be advised by <a href="https://homes.cs.washington.edu/~abhgupta/" target="_blank">Abhishek
-      Gupta</a> in the <a href="https://weirdlab.cs.washington.edu/index.html" target="_blank">WEIRD Lab</a>.
-    My broad research interests are in robotics, reinforcement learning, and computer vision. Recently, I've been
-    focused on reducing the need for manual data collection to
-    enable scalable robot learning for long-horizon, diverse, and complex tasks.
-    At the <a href="https://allenai.org/" target="_blank">Allen Institute for AI</a>, I worked on the <a
-      href="https://prior.allenai.org/" target="_blank">PRIOR</a> team as a student researcher.
   </p>
+
   <p>
-    Alongside my research, I enjoy teaching, I have TA'ed Computer Vision (CSE455) and Discrete Mathematics (CSE311) multiple times.
+    I’m fortunate to be advised by
+    <a href="https://homes.cs.washington.edu/~abhgupta/" target="_blank" rel="noopener">Abhishek Gupta</a>
+    in the
+    <a href="https://weirdlab.cs.washington.edu/index.html" target="_blank" rel="noopener">WEIRD Lab</a>,
+    where I work on problems in robot learning. My current research focuses on building robotic systems
+    that not only complete tasks, but also reason about their environment and understand its underlying dynamics.
+  </p>
+
+  <p>
+    Beyond research, I serve as a teaching assistant for computer vision, helping students develop a strong
+    foundation in perception and its applications in robotics and AI.
+  </p>
+
+  <p>
+    Previously, I spent time at Amazon Web Services, and as a student researcher at the
+    <a href="https://allenai.org/" target="_blank" rel="noopener">Allen Institute for AI</a> on the
+    <a href="https://prior.allenai.org/" target="_blank" rel="noopener">PRIOR</a> team.
   </p>
 </div>
 
@@ -70,6 +38,14 @@ title: Home
 <div class="docs-section" id="news">
   <h4>News</h4>
   <ul>
+    <li>
+      <span class="news-date">[August. 2025]</span>&nbsp;&nbsp;
+      Honored to receive the <b>2025 Microsoft Endowed Scholarship</b>.
+    </li>
+    <li>
+      <span class="news-date">[June. 2025]</span>&nbsp;&nbsp;
+      Unified World Model won the <b style="color:red;">Best Paper Award</b> at <b>ICML 2025 World Modeling Workshop</b>!
+    </li>
     <li>
       <span class="news-date">[April. 2025]</span>&nbsp;&nbsp;
       Unified World Model has been accepted to <b>RSS 2025</b>.
@@ -81,24 +57,6 @@ title: Home
     <li>
       <span class="news-date">[January. 2025]</span>&nbsp;&nbsp;
       HAMSTER has been accepted to <b>ICLR 2025</b>.
-    </li>
-    <li>
-      <span class="news-date">[January. 2025]</span>&nbsp;&nbsp;
-      I am a teaching assistant for Computer Vision (CSE455).
-    </li>
-    <li>
-      <span class="news-date">[Oct. 2024]</span>&nbsp;&nbsp;
-      Our OPTIMUS paper has been accepted to <b>WACV 2025</b>!
-    </li>
-    <li>
-      <span class="news-date">[Sep. 2024]</span>&nbsp;&nbsp;
-      Thrilled to share that I was awarded the <a
-        href="https://www.cs.washington.edu/students/ugrad/departmental/faenov" target="_blank"><b>Kyril Faenov Endowed
-          Scholarship</b></a>!
-    </li>
-    <li>
-      <span class="news-date">[Sep. 2024]</span>&nbsp;&nbsp;
-      Grateful to have received the <b>Experiential Learning Award</b> with a $3000 grant!
     </li>
   </ul>
 </div>
@@ -125,13 +83,26 @@ title: Home
         <div class="row">
           <div class="four columns">
             <div class="figure">
-              <img src="{{ paper.image }}" width="100%">
+              {% if paper.gif %}
+                <img src="{{ paper.gif }}" width="100%">
+              {% else %}
+                <img src="{{ paper.image }}" width="100%">
+              {% endif %}
             </div>
           </div>
           <div class="eight columns">
             <p class="title"><b>{{ paper.title }}</b></p>
             <p>{{ paper.authors }}</p>
             <p><i>{{ paper.venue }}</i></p>
+            {% if paper.award %}
+            <p>
+              {% assign award_parts = paper.award | split: ' - ' %}
+              {% if award_parts[1] %}
+                {{ award_parts[1] }} - 
+              {% endif %}
+              <b style="color:red;">{{ award_parts[0] }}</b>
+            </p>
+            {% endif %}
             <div class="paper-buttons">
               {% if paper.paper_pdf %}
               <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
@@ -209,80 +180,116 @@ title: Home
 
     <!-- </div> -->
 
-    <!-- ========== PROJECTS ========== 
+<!-- ========== TEACHING ========== -->
+<div class="docs-section" id="teaching">
+  <h4>Teaching</h4>
+  
+  <p>
+    I teach a little bit when I have time! Here are some of the notes/slides from the lectures:
+  </p>
+  
+  {% assign lectures = site.data.lectures.lectures %}
+  {% if lectures.size > 0 %}
+    {% assign lectures_by_course = lectures | group_by: "course" %}
+    {% for course_group in lectures_by_course %}
+      <div class="course-container">
+        <div class="course-header">
+          <div class="course-title">{{ course_group.name }}</div>
+          <div class="course-semester">{{ course_group.items.first.date }}</div>
+        </div>
+        
+        <div class="lecture-list">
+          {% for lecture in course_group.items %}
+            <div class="lecture-item">
+              {% if lecture.slides %}
+                <a href="{{ lecture.slides }}" target="_blank">
+                  <div class="lecture-title">{{ lecture.title }}</div>
+                  <div class="lecture-description">{{ lecture.description }}</div>
+                </a>
+              {% else %}
+                <div class="lecture-title">{{ lecture.title }}</div>
+                <div class="lecture-description">{{ lecture.description }}</div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p><em>Teaching materials coming soon! 📚</em></p>
+  {% endif %}
+</div>
+
+<!-- ========== PROJECTS ========== -->
 <div class="docs-section" id="projects">
   <h4>Projects</h4>
-
-  <ul class="tab-nav">
-    <li><div class="button active" data-ref="#projects-selected">Selected</div></li>
-    <li><div class="button" data-ref="#projects-all">All</div></li>
-  </ul>
+  <p>
+    Beyond research, I love tinkering with side projects that combine my interests in robotics, AI, and everyday problems. Here are some of my favorites:
+  </p>
 
   <div class="tab-content">
     <div class="tab-pane active" id="projects-selected">
       {% assign selected_projects = site.data.projects.projects | where: "selected", "y" %}
-      {% for project in selected_projects %}
-        {% assign index_modulo = forloop.index0 | modulo:3 %}
-        {% if index_modulo == 0 %}
-          <div class="row">
-        {% endif %}
-
-          <div class="four columns">
-            <div class="project-container">
-
-                <div class="project-image-container">
-                  <a href="{{ project.url }}">
-                    <img src="{{ project.thumbnail }}" class="u-max-full-width" />
-                  </a>
+      {% if selected_projects.size > 0 %}
+        {% for project in selected_projects %}
+          <div class="project-featured">
+            <div class="row">
+              <div class="twelve columns" style="text-align: center;">
+                <h5><b>{{ project.title }}</b></h5>
+                <p><i>{{ project.subtitle }}</i></p>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="eight columns offset-by-two">
+                <div class="project-container">
+                    <div class="project-image-container">
+                      {% assign file_extension = project.thumbnail | split: '.' | last %}
+                      {% if file_extension == 'mov' or file_extension == 'mp4' or file_extension == 'webm' %}
+                        {% if project.url %}
+                          <a href="{{ project.url }}" target="_blank">
+                            <video class="u-max-full-width" loop controls preload="auto" playsinline>
+                              <source src="{{ project.thumbnail }}" type="video/mp4">
+                              Your browser doesn't support the video tag. <a href="{{ project.thumbnail }}">Download the video</a>.
+                            </video>
+                          </a>
+                        {% else %}
+                          <video class="u-max-full-width" loop controls preload="auto" playsinline>
+                            <source src="{{ project.thumbnail }}" type="video/mp4">
+                            Your browser doesn't support the video tag. <a href="{{ project.thumbnail }}">Download the video</a>.
+                          </video>
+                        {% endif %}
+                      {% else %}
+                        {% if project.url %}
+                          <a href="{{ project.url }}" target="_blank">
+                            <img src="{{ project.thumbnail }}" class="u-max-full-width" />
+                          </a>
+                        {% else %}
+                          <img src="{{ project.thumbnail }}" class="u-max-full-width" />
+                        {% endif %}
+                      {% endif %}
+                    </div>
                 </div>
-
-                <div class="project-caption">
-                  <b>{{ project.title }}</b> <br/>
-                  {{ project.subtitle }}
-                </div>
-
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="ten columns offset-by-one" style="text-align: center; margin-top: 20px;">
+                <p><em>💡 Turn on your music for the best experience!</em></p>
+                <p>{{ project.description }}</p>
+                {% if project.github %}
+                  <p><a href="{{ project.github }}" target="_blank"><i class="fa fa-github"></i> Code</a></p>
+                {% endif %}
+              </div>
             </div>
           </div>
-
-        {% if index_modulo == 2 %}
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-
-    <div class="tab-pane" id="projects-all">
-      {% for project in site.data.projects.projects %}
-        {% assign index_modulo = forloop.index0 | modulo:3 %}
-        {% if index_modulo == 0 %}
-          <div class="row">
-        {% endif %}
-
-          <div class="four columns">
-            <div class="project-container">
-
-                <div class="project-image-container">
-                  <a href="{{ project.url }}">
-                    <img src="{{ project.thumbnail }}" class="u-max-full-width" />
-                  </a>
-                </div>
-
-                <div class="project-caption">
-                  <b>{{ project.title }}</b> <br/>
-                  {{ project.subtitle }}
-                </div>
-
-            </div>
-          </div>
-
-        {% if index_modulo == 2 %}
-          </div>
-        {% endif %}
-      {% endfor %}
+        {% endfor %}
+      {% else %}
+        <p><em>More fun projects coming soon! 🚀</em></p>
+      {% endif %}
     </div>
   </div>
-
 </div>
--->
 
     <!-- ========== RESUME ========== -->
     <!--<div class="docs-section" id="resume">
