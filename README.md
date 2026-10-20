@@ -1,34 +1,40 @@
 # raymondyu5.github.io
 
-Personal research page for Raymond Yu. Plain static HTML/CSS/JS — no build step.
-GitHub Pages serves the files directly (`.nojekyll` disables Jekyll).
+Personal research page for Raymond Yu, served by GitHub Pages at
+[raymondyu5.github.io](https://raymondyu5.github.io). Plain HTML, CSS, and JS — no build step
+(`.nojekyll` tells Pages to serve the files as-is).
 
-- `index.html` — home: about, news
-- `research.html` — papers
-- `styles.css` — styling; colors/fonts are tokens at the top (`:root`), dark mode below them
-- `viz.js` — the canvas animations (banner + inline figures)
-- `lab.html` — every animation side by side, for picking/tuning (not linked from the site)
-
-## Animations
-
-Any `<div class="viz" data-viz="NAME">` becomes an animation. Options:
-
-- `data-viz`: `reveal`, `murmur`, `stipple`, `topo`, `flock`, `slime`, `coral`, `rain`
-- `data-image="assets/viz/x.jpg"`: target picture for `reveal` / `stipple`
-- `data-focus="0.15"`: which vertical slice of the picture to keep (0 top … 1 bottom)
-- `data-invert`: use the bright parts of the picture instead of the dark ones
-- `data-shape`: target for `stipple` / `murmur` — `tree`, `landscape`, `spiral`, or `rainier`
-  (with `data-image="assets/viz/rainier.jpg"`: Rainier's skyline is traced from the photo)
-- `data-height`, `data-caption`
-
-Target images (`assets/viz/`) are public domain: Van Gogh, *The Starry Night* (1889);
-*Mount Rainier over Tacoma* (Wikimedia Commons, public domain), cropped.
-
-Add `?warm=600` to a URL to fast-forward the simulations (handy for screenshots).
+```
+index.html      home: banner, bio, links
+research.html   papers
+styles.css      all styling; colours are tokens at the top, dark mode right below
+viz.js          the banner animations (scenes and options are documented at the top)
+theme.js        the light/dark toggle
+assets/
+  icon.png              favicon
+  profile-pics/         portrait
+  publications/         paper teasers (images, gifs, video)
+  viz/rainier.jpg       photo the Rainier skyline is traced from
+googlef0696328b30b87db.html   Google Search Console verification
+```
 
 ## Editing
 
-To add a paper, copy an `<article class="pub">` block and drop the teaser in `assets/publications/`.
-To add news, add an `<li>` to `<ol class="timeline">`.
+- **Bio / links:** `index.html`, in the `about` section.
+- **A new paper:** in `research.html`, copy an `<article class="pub">` block, update the text and
+  links, and put the teaser in `assets/publications/`.
+- **Banner scenes:** `data-scenes` on the `.viz` element picks them, in order —
+  `rainier`, `grove` (home) and `city`, `workshop` (research).
 
-Preview locally: `python3 -m http.server` then open http://localhost:8000.
+## Preview locally
+
+```
+python3 -m http.server
+```
+
+then open http://localhost:8000. Append `?warm=600` to a URL to fast-forward the animation.
+
+## Credits
+
+`assets/viz/rainier.jpg` is cropped from *Mount Rainier over Tacoma* (Wikimedia Commons, public
+domain).
