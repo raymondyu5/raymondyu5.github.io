@@ -2,18 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Raymond Yu</title>
-  <meta name="description" content="Raymond Yu — University of Washington.">
-  <meta name="author" content="Raymond Yu">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta property="og:title" content="Raymond Yu" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://raymondyu5.github.io" />
-  <meta property="og:site_name" content="Raymond Yu" />
-  <link rel="canonical" href="https://raymondyu5.github.io" />
-
-  <link rel="icon" type="image/png" href="assets/icon.png?v=2025">
+  <title>Raymond Yu</title>
+  <meta name="description" content="Raymond Yu — robot learning at the University of Washington.">
+  <meta name="author" content="Raymond Yu">
+  <meta property="og:title" content="Raymond Yu">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://raymondyu5.github.io">
+  <link rel="canonical" href="https://raymondyu5.github.io">
+  <link rel="icon" type="image/png" href="assets/icon.png?v=2026">
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6P16DVV84"></script>
@@ -23,151 +20,90 @@
     gtag('js', new Date());
     gtag('config', 'G-Z6P16DVV84');
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    // apply a saved light/dark choice before the page paints
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="bg" aria-hidden="true">
-    <span class="bg-aurora"></span>
-    <span class="bg-aurora alt"></span>
-    <canvas class="bg-field"></canvas>
-  </div>
-  <main class="wrap">
+  <div class="page">
 
-    <!-- ========== HEADER ========== -->
-    <header class="intro">
-      <img class="avatar" src="assets/profile-pics/raymond.jpg?v=2026" alt="Raymond Yu">
-      <div class="intro-text">
-        <h1>Raymond Yu</h1>
-        <nav class="socials" aria-label="Links">
-          <a href="mailto:ryu5@cs.washington.edu" aria-label="Email">Email</a>
-          <span class="dot">·</span>
-          <a href="https://scholar.google.com/citations?user=n9UhRCYAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
-          <span class="dot">·</span>
-          <a href="https://github.com/raymondyu5" target="_blank" rel="noopener">GitHub</a>
-          <span class="dot">·</span>
-          <a href="https://x.com/yu_raymond5" target="_blank" rel="noopener">Twitter</a>
-          <span class="dot">·</span>
-          <a href="https://www.linkedin.com/in/yuraymond5/" target="_blank" rel="noopener">LinkedIn</a>
-        </nav>
-      </div>
+    <!-- ========== TOP BAR ========== -->
+    <header class="topbar">
+      <a class="name" href="/">Raymond Yu</a>
+      <nav>
+        <a href="index.html" class="active" aria-current="page">home</a>
+        <a href="research.html">research</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode"></button>
+      </nav>
     </header>
 
-    <!-- ========== BIO ========== -->
-    <section id="bio">
-      <p class="lede">
-        Hey there! I'm an undergraduate studying computer science at the University of Washington, advised by
-        <a href="https://homes.cs.washington.edu/~abhgupta/" target="_blank" rel="noopener">Abhishek Gupta</a>
-        in the <a href="https://weirdlab.cs.washington.edu/index.html" target="_blank" rel="noopener">WEIRD Lab</a>.
-      </p>
-      <p>
-        My research focuses on teaching robots to learn from all kinds of data, including suboptimal
-        demonstrations, vision data from the internet, and simulation, rather than relying on large amounts
-        of clean, hand-collected robot data. I'm interested in systems that can squeeze useful behavior out
-        of cheap, abundant, and imperfect data sources.
-      </p>
-      <p class="highlight">I'm applying for PhD programs beginning this fall, and would love to chat about research fit or potential collaborations.</p>
-    </section>
+    <!-- ========== HERO VISUALIZATION ========== -->
+    <!-- data-viz picks the animation from viz.js (compare them all on lab.html) -->
+    <figure class="hero">
+      <div class="viz" data-viz="journey" data-scenes="rainier,grove" data-image="assets/viz/rainier.jpg" data-height="200"></div>
+      <figcaption class="fade-out"><span class="viz-caption">was bored in sfo airport one day waiting for a delayed flight</span></figcaption>
+    </figure>
 
-    <!-- ========== NEWS ========== -->
-    <section id="news">
-      <h2>News</h2>
-      <ul class="news">
-        <li><span class="date">Jun 2026</span><span>Excited to release <strong>SCORE</strong>!</span></li>
-        <li><span class="date">Jun 2025</span><span>Unified World Models won the <strong class="award">Best Paper Award</strong> at the ICML 2025 World Modeling Workshop.</span></li>
-        <li><span class="date">Apr 2025</span><span>Unified World Models accepted to <strong>RSS 2025</strong>.</span></li>
-        <li><span class="date">Jan 2025</span><span>DRAWER accepted to <strong>CVPR 2025</strong>; HAMSTER accepted to <strong>ICLR 2025</strong>.</span></li>
-      </ul>
-    </section>
-
-    <!-- ========== PUBLICATIONS ========== -->
-    <section id="publications">
-      <h2>Publications</h2>
-      <p class="pub-note"><sup class="eq">*</sup> denotes equal contribution</p>
-
-      <article class="pub">
-        <a class="pub-media" href="https://weirdlabuw.github.io/score/" target="_blank" rel="noopener">
-          <video src="assets/publications/score_teaser.mp4" poster="assets/publications/score_teaser.jpg"
-                 autoplay loop muted playsinline></video>
-        </a>
-        <div class="pub-text">
-          <h3><a href="https://weirdlabuw.github.io/score/" target="_blank" rel="noopener">Support-Constrained RL Enables Real-World Policy Improvement without Real-World Experience</a></h3>
-          <p class="authors"><strong>Raymond Yu</strong><sup class="eq">*</sup>, William Huey<sup class="eq">*</sup>, Mustafa Mukadam, Anusha Nagabandi, Abhishek Gupta</p>
-          <p class="venue">Preprint, 2026</p>
-          <p class="pub-links">
-            <a href="https://weirdlabuw.github.io/score/" target="_blank" rel="noopener">Website</a>
-            <a href="https://arxiv.org/abs/2606.27475" target="_blank" rel="noopener">Paper</a>
-          </p>
+    <main>
+      <!-- ========== ABOUT ========== -->
+      <section id="about" class="about">
+        <div class="portrait">
+          <img src="assets/profile-pics/raymond.jpg?v=2026" alt="Raymond Yu">
         </div>
-      </article>
+        <p>
+          Hey there! I'm an undergraduate studying computer science at the University of Washington, advised by
+          <a href="https://homes.cs.washington.edu/~abhgupta/">Abhishek Gupta</a>
+          in the <a href="https://weirdlab.cs.washington.edu/">WEIRD Lab</a>.
+          My research focuses on squeezing useful robot behavior out of cheap, abundant, and imperfect data.
+        </p>
+        <p>
+          Lately, I've been thinking about how to use simulation as a midtraining stage for robot policies.
+        </p>
+        <p class="callout">Applying to PhD programs this cycle &mdash; happy to chat about research fit or collaborations.</p>
 
-      <article class="pub">
-        <div class="pub-media"><img src="assets/publications/UWM-teaser.gif" alt="Unified World Models"></div>
-        <div class="pub-text">
-          <h3><a href="https://weirdlabuw.github.io/uwm/" target="_blank" rel="noopener">Unified World Models</a></h3>
-          <p class="authors">Chuning Zhu, <strong>Raymond Yu</strong>, Siyuan Feng, Benjamin Burchfiel, Paarth Shah, Abhishek Gupta</p>
-          <p class="venue">RSS 2025 · <span class="award">Best Paper, ICML 2025 World Modeling Workshop</span></p>
-          <p class="pub-links">
-            <a href="https://weirdlabuw.github.io/uwm/" target="_blank" rel="noopener">Website</a>
-            <a href="https://github.com/WEIRDLabUW/unified-world-model" target="_blank" rel="noopener">Code</a>
-          </p>
-        </div>
-      </article>
+        <ul class="links">
+          <li><a href="mailto:ryu5@cs.washington.edu">email</a></li>
+          <li><a href="https://scholar.google.com/citations?user=n9UhRCYAAAAJ&hl=en">scholar</a></li>
+          <li><a href="https://github.com/raymondyu5">github</a></li>
+          <li><a href="https://x.com/yu_raymond5">twitter</a></li>
+          <li><a href="https://www.linkedin.com/in/yuraymond5/">linkedin</a></li>
+        </ul>
+      </section>
 
-      <article class="pub">
-        <div class="pub-media"><img src="assets/publications/DRAWER-teaser.gif" alt="DRAWER"></div>
-        <div class="pub-text">
-          <h3><a href="https://xiahongchi.github.io/DRAWER/" target="_blank" rel="noopener">DRAWER: Digital Reconstruction and Articulation With Environment Realism</a></h3>
-          <p class="authors">Hongchi Xia, Entong Su, Marius Memmel, Arhan Jain, <strong>Raymond Yu</strong>, Numfor Mbiziwo-Tiapo, Ali Farhadi, Abhishek Gupta, Shenlong Wang, Wei-Chiu Ma</p>
-          <p class="venue">CVPR 2025</p>
-          <p class="pub-links">
-            <a href="https://xiahongchi.github.io/DRAWER/" target="_blank" rel="noopener">Website</a>
-            <a href="https://github.com/xiahongchi/DRAWER" target="_blank" rel="noopener">Code</a>
-          </p>
-        </div>
-      </article>
 
-      <article class="pub">
-        <div class="pub-media"><img src="assets/publications/HAMSTER-teaser.gif" alt="HAMSTER"></div>
-        <div class="pub-text">
-          <h3><a href="https://hamster-robot.github.io/" target="_blank" rel="noopener">HAMSTER: Hierarchical Action Models For Open-World Robot Manipulation</a></h3>
-          <p class="authors">Yi Li, Yuquan Deng, Jesse Zhang, Joel Jang, Marius Memmel, <strong>Raymond Yu</strong>, Caelan Garrett, Fabio Ramos, Dieter Fox, Anqi Li, Abhishek Gupta, Ankit Goyal</p>
-          <p class="venue">ICLR 2025</p>
-          <p class="pub-links">
-            <a href="https://hamster-robot.github.io/" target="_blank" rel="noopener">Website</a>
-            <a href="https://github.com/liyi14/HAMSTER_beta" target="_blank" rel="noopener">Code</a>
-          </p>
-        </div>
-      </article>
-
-      <article class="pub">
-        <div class="pub-media"><img src="assets/publications/optimus_teaser.png" alt="OPTIMUS"></div>
-        <div class="pub-text">
-          <h3><a href="https://www.arxiv.org/pdf/2506.13902" target="_blank" rel="noopener">OPTIMUS: Observing Persistent Transformations in Multi-temporal Unlabeled Satellite-data</a></h3>
-          <p class="authors"><strong>Raymond Yu</strong><sup class="eq">*</sup>, Paul Han<sup class="eq">*</sup>, Josh Myers-Dean, Piper Wolters, Favyen Bastani</p>
-          <p class="venue">WACV 2025</p>
-          <p class="pub-links">
-            <a href="https://www.arxiv.org/pdf/2506.13902" target="_blank" rel="noopener">Paper</a>
-            <a href="https://huggingface.co/datasets/optimus-change/optimus-dataset" target="_blank" rel="noopener">Dataset</a>
-          </p>
-        </div>
-      </article>
-    </section>
+    </main>
 
     <footer>
-      <p>Raymond Yu · ryu5 [at] cs.washington.edu</p>
-      <p class="updated">Last updated June 2026</p>
+      <span>last updated oct 2026</span>
+      <a href="#">back to top &uarr;</a>
     </footer>
+  </div>
 
-  </main>
+  <!-- Flag Counter visit tracker (history at https://info.flagcounter.com/ltCg) -->
+  <img class="tracker" alt="" src="https://s11.flagcounter.com/count2/ltCg/bg_FFFFFF/txt_000000/border_FFFFFF/columns_1/maxflags_1/viewers_0/labels_0/pageviews_1/flags_0/percent_0/">
 
-  <!-- Invisible visit tracker. Keeps the Flag Counter (ltCg) history going;
-       view your stats anytime at https://info.flagcounter.com/ltCg -->
-  <img class="tracker" alt=""
-       src="https://s11.flagcounter.com/count2/ltCg/bg_FFFFFF/txt_000000/border_FFFFFF/columns_1/maxflags_1/viewers_0/labels_0/pageviews_1/flags_0/percent_0/">
-
-  <script src="flowfield.js" defer></script>
+  <script src="viz.js" defer></script>
+  <script>
+    // light/dark toggle: remembers the choice; the canvas recolours via 'themechange'
+    (function () {
+      const btn = document.querySelector('.theme-toggle'), root = document.documentElement;
+      if (!btn) return;
+      const dark = () => root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      const SUN = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>';
+      const MOON = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>';
+      // show what you'd switch to: the sun in dark mode, the moon in light mode
+      const label = () => { btn.innerHTML = dark() ? SUN : MOON; btn.setAttribute('aria-label', dark() ? 'Switch to light mode' : 'Switch to dark mode'); };
+      btn.addEventListener('click', () => {
+        root.dataset.theme = dark() ? 'light' : 'dark';
+        try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+        label(); document.dispatchEvent(new Event('themechange'));
+      });
+      matchMedia('(prefers-color-scheme: dark)').addEventListener('change', label);
+      label();
+    })();
+  </script>
 </body>
 </html>
