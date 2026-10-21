@@ -315,11 +315,10 @@ footer a:hover { color: var(--ink); }
   body { font-size: 14px; }
   .topbar .name { font-size: 1.6rem; }
   .topbar nav { gap: 12px; }
-  /* phones: links stacked beside the photo, then the bio at full width below */
-  .about { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "links photo" "bio bio"; column-gap: 16px; }
-  .portrait { grid-area: photo; float: none; width: 128px; height: 128px; margin: 0 0 22px; border-radius: 12px; }
-  .about .links { grid-area: links; flex-direction: column; justify-content: center; gap: 10px; margin: 0 0 22px; }
-  .bio { grid-area: bio; }
+  /* phones: the photo sits beside the bio, which is justified (and hyphenated) so the
+     narrow column beside it keeps straight edges */
+  .portrait { width: 120px; height: 120px; margin: 4px 0 8px 14px; border-radius: 12px; }
+  .bio p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 8 4 4; -webkit-hyphenate-limit-before: 4; -webkit-hyphenate-limit-after: 4; }
   .pub { grid-template-columns: 1fr; gap: 0.8rem; }
   .pub-figure { max-width: 420px; }
 }
