@@ -315,8 +315,8 @@ footer a:hover { color: var(--ink); }
   body { font-size: 14px; }
   .topbar .name { font-size: 1.6rem; }
   .topbar nav { gap: 12px; }
-  /* the photo sits above the bio on phones, so the text gets the full width */
-  .portrait { float: none; display: block; width: 96px; height: 96px; margin: 0 0 18px; }
+  /* on phones a smaller photo sits beside the start of the bio, leaving the text room to breathe */
+  .portrait { width: 84px; height: 84px; margin: 4px 0 8px 14px; border-radius: 12px; }
   .pub { grid-template-columns: 1fr; gap: 0.8rem; }
   .pub-figure { max-width: 420px; }
 }
