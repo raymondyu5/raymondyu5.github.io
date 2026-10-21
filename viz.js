@@ -22,10 +22,15 @@
 
   /* ---------------- shared helpers ---------------- */
 
+  // The theme's ink and paper colours. If the stylesheet hasn't applied yet (it can lag the
+  // script on a cold load in Safari), fall back to the theme's values instead of painting black.
   function readColors() {
-    const s = getComputedStyle(document.documentElement);
+    const s = getComputedStyle(document.documentElement), root = document.documentElement;
+    const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    const fallback = { '--ink': dark ? 'f0eee8' : '111111', '--paper': dark ? '141412' : 'f5f4ef' };
     const rgb = v => {
-      const h = s.getPropertyValue(v).trim().replace('#', '');
+      let h = s.getPropertyValue(v).trim().replace('#', '');
+      if (!/^[0-9a-f]{6}$/i.test(h)) h = fallback[v];
       return [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16));
     };
     const ink = rgb('--ink'), paper = rgb('--paper');
@@ -842,6 +847,7 @@
     const recolor = () => { if (r) { Object.assign(r.c, readColors()); r.draw(ctx); } };
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', recolor);
     document.addEventListener('themechange', recolor);
+    window.addEventListener('load', recolor);
     let timer;
     window.addEventListener('resize', () => {
       clearTimeout(timer);
@@ -1277,6 +1283,7 @@
     const recolor = () => { colors = readColors(); };
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', recolor);
     document.addEventListener('themechange', recolor);
+    window.addEventListener('load', recolor);
     requestAnimationFrame(frame);
   }
 
