@@ -26,6 +26,11 @@ googlef0696328b30b87db.html   Google Search Console verification
 - **Banner scenes:** `data-scenes` on the `.viz` element picks them, in order —
   `rainier`, `grove` (home) and `city`, `workshop` (research).
 
+## Cache busting
+
+Pages link `styles.css?v=N`, `viz.js?v=N` and `theme.js?v=N`. Bump N in all three HTML files when
+you change those files, so visitors' browsers fetch the new versions.
+
 ## Preview locally
 
 ```

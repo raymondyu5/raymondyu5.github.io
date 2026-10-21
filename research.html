@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Research · Raymond Yu</title>
   <meta name="description" content="Papers by Raymond Yu on robot learning from imperfect data.">
-  <link rel="icon" type="image/png" href="assets/icon.png?v=2026">
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="icon" type="image/png" href="assets/icon.png?v=2027">
+  <link rel="apple-touch-icon" href="assets/icon.png?v=2027">
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6P16DVV84"></script>
@@ -20,7 +22,7 @@
     // apply a saved light/dark choice before the page paints
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
   <div class="page">
@@ -30,6 +32,7 @@
       <nav>
         <a href="index.html">home</a>
         <a href="research.html" class="active" aria-current="page">research</a>
+        <a href="life.html">life</a>
         <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode"></button>
       </nav>
     </header>
@@ -61,7 +64,7 @@
           <div class="pub-body">
             <h3><a href="https://weirdlabuw.github.io/uwm/">Unified World Models</a></h3>
             <p class="authors">Chuning Zhu, <strong>Raymond Yu</strong>, Siyuan Feng, Benjamin Burchfiel, Paarth Shah, Abhishek Gupta</p>
-            <p class="meta"><span class="venue">RSS 2025</span><span class="award">&middot; Best Paper, ICML 2025 World Modeling Workshop</span></p>
+            <p class="meta"><span class="venue">RSS 2025</span><span class="award">Best Paper, ICML 2025 World Modeling Workshop</span></p>
             <p class="pub-links"><a href="https://weirdlabuw.github.io/uwm/">website</a><a href="https://github.com/WEIRDLabUW/unified-world-model">code</a></p>
           </div>
         </article>
@@ -104,7 +107,7 @@
     </footer>
   </div>
 
-  <script src="viz.js" defer></script>
-  <script src="theme.js" defer></script>
+  <script src="viz.js?v=3" defer></script>
+  <script src="theme.js?v=3" defer></script>
 </body>
 </html>

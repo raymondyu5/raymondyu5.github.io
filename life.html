@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Life · Raymond Yu</title>
+  <meta name="description" content="Raymond Yu, outside the lab.">
+  <meta name="author" content="Raymond Yu">
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="icon" type="image/png" href="assets/icon.png?v=2027">
+  <link rel="apple-touch-icon" href="assets/icon.png?v=2027">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6P16DVV84"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z6P16DVV84');
+  </script>
+
+  <script>
+    // apply a saved light/dark choice before the page paints
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body class="life">
+  <div class="page">
+
+    <header class="topbar">
+      <a class="name" href="index.html">Raymond Yu</a>
+      <nav>
+        <a href="index.html">home</a>
+        <a href="research.html">research</a>
+        <a href="life.html" class="active" aria-current="page">life</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode"></button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- the open middle (.gallery-window) is where the walk shows through; see viz.js -->
+      <div class="gallery" data-walk>
+        <figure class="snap" style="grid-area: a"><img src="assets/life/kyoto.jpg" alt="Under the torii gates at Fushimi Inari" loading="lazy"></figure>
+        <figure class="snap" style="grid-area: b"><img src="assets/life/guangzhou.jpg" alt="Night skyline over the Pearl River" loading="lazy"></figure>
+        <figure class="snap" style="grid-area: c"><img src="assets/life/gorge.jpg" alt="By a waterfall in a slate gorge" loading="lazy"></figure>
+        <figure class="snap" style="grid-area: d"><img src="assets/life/flying.jpg" alt="In the cockpit of a small plane" loading="lazy"></figure>
+        <figure class="snap" style="grid-area: e"><img src="assets/life/chongqing.jpg" alt="Hongyadong lit up at night" loading="lazy"></figure>
+        <div class="gallery-window"><p class="window-quote"><span>the stochasticity of life is beautiful.</span></p></div>
+        <figure class="snap" style="grid-area: f"><img src="assets/life/lecture.jpg" alt="Giving a lecture" loading="lazy"></figure>
+        <figure class="snap" style="grid-area: g"><img src="assets/life/fishing.jpg" alt="Fishing off a pier at sunset" loading="lazy"></figure>
+        <figure class="snap" style="grid-area: h"><img src="assets/life/canyon.jpg" alt="In a frozen canyon" loading="lazy"></figure>
+        <figure class="snap" style="grid-area: i"><img src="assets/life/track.jpg" alt="In the blocks at a track meet" loading="lazy"></figure>
+      </div>
+    </main>
+
+    <footer>
+      <span>last updated oct 2026</span>
+      <a href="#">back to top &uarr;</a>
+    </footer>
+  </div>
+
+  <script src="viz.js?v=3" defer></script>
+  <script src="theme.js?v=3" defer></script>
+</body>
+</html>

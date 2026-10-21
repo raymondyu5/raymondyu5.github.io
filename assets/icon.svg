@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .bg { fill: #f5f4ef; } .ink { fill: #111111; } .snow { fill: #f5f4ef; }
+    @media (prefers-color-scheme: dark) { .bg { fill: #141412; } .ink { fill: #f0eee8; } .snow { fill: #141412; } }
+  </style>
+  <rect class="bg" width="32" height="32" rx="7"/>
+  <!-- Rainier: a broad summit dome over long flanks -->
+  <path class="ink" d="M1 25 L9.5 16.2 Q11 13.6 13.6 12.7 Q16.4 11.9 19.4 12.6 Q21.4 13.2 22.6 14.8 L31 25 Z"/>
+  <!-- snowfield with a ragged lower edge -->
+  <path class="snow" d="M11.4 15.4 Q12.6 13.8 14.4 13.3 Q16.6 12.8 19 13.3 Q20.8 13.8 21.8 15.2 L23 16.8 L21.4 16 L20 17.6 L18.4 16.2 L16.6 17.8 L15 16.3 L13.4 17.6 L12.2 16.4 L10.6 17.2 Z"/>
+  <circle class="ink" cx="25" cy="7.5" r="2.6"/>
+</svg>

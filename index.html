@@ -10,7 +10,9 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://raymondyu5.github.io">
   <link rel="canonical" href="https://raymondyu5.github.io">
-  <link rel="icon" type="image/png" href="assets/icon.png?v=2026">
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="icon" type="image/png" href="assets/icon.png?v=2027">
+  <link rel="apple-touch-icon" href="assets/icon.png?v=2027">
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6P16DVV84"></script>
@@ -25,7 +27,7 @@
     // apply a saved light/dark choice before the page paints
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
   <div class="page">
@@ -36,6 +38,7 @@
       <nav>
         <a href="index.html" class="active" aria-current="page">home</a>
         <a href="research.html">research</a>
+        <a href="life.html">life</a>
         <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode"></button>
       </nav>
     </header>
@@ -70,6 +73,7 @@
           <li><a href="https://www.linkedin.com/in/yuraymond5/">linkedin</a></li>
         </ul>
       </section>
+
     </main>
 
     <footer>
@@ -81,7 +85,7 @@
   <!-- Flag Counter visit tracker (history at https://info.flagcounter.com/ltCg) -->
   <img class="tracker" alt="" src="https://s11.flagcounter.com/count2/ltCg/bg_FFFFFF/txt_000000/border_FFFFFF/columns_1/maxflags_1/viewers_0/labels_0/pageviews_1/flags_0/percent_0/">
 
-  <script src="viz.js" defer></script>
-  <script src="theme.js" defer></script>
+  <script src="viz.js?v=3" defer></script>
+  <script src="theme.js?v=3" defer></script>
 </body>
 </html>
