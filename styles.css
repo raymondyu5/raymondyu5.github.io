@@ -315,7 +315,11 @@ footer a:hover { color: var(--ink); }
   body { font-size: 14px; }
   .topbar .name { font-size: 1.6rem; }
   .topbar nav { gap: 12px; }
-  .portrait { width: 120px; height: 120px; margin: 4px 0 10px 16px; border-radius: 12px; }
+  /* phones: links stacked beside the photo, then the bio at full width below */
+  .about { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "links photo" "bio bio"; column-gap: 16px; }
+  .portrait { grid-area: photo; float: none; width: 128px; height: 128px; margin: 0 0 22px; border-radius: 12px; }
+  .about .links { grid-area: links; flex-direction: column; justify-content: center; gap: 10px; margin: 0 0 22px; }
+  .bio { grid-area: bio; }
   .pub { grid-template-columns: 1fr; gap: 0.8rem; }
   .pub-figure { max-width: 420px; }
 }

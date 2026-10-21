@@ -27,7 +27,7 @@
     // apply a saved light/dark choice before the page paints
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
   <div class="page">
@@ -54,17 +54,18 @@
       <!-- ========== ABOUT ========== -->
       <section id="about" class="about">
         <img class="portrait" src="assets/profile-pics/raymond.jpg?v=2026" alt="Raymond Yu">
-        <p>
-          Hey there! I'm an undergraduate studying computer science at the University of Washington, advised by
-          <a href="https://homes.cs.washington.edu/~abhgupta/">Abhishek Gupta</a>
-          in the <a href="https://weirdlab.cs.washington.edu/">WEIRD Lab</a>.
-          My research focuses on squeezing useful robot behavior out of cheap, abundant, and imperfect data.
-        </p>
-        <p>
-          Lately, I've been thinking about how to use simulation as a midtraining stage for robot policies.
-        </p>
-        <p class="callout">Applying to PhD programs this cycle &mdash; happy to chat about research fit or collaborations.</p>
-
+        <div class="bio">
+          <p>
+            Hey there! I'm an undergraduate studying computer science at the University of Washington, advised by
+            <a href="https://homes.cs.washington.edu/~abhgupta/">Abhishek Gupta</a>
+            in the <a href="https://weirdlab.cs.washington.edu/">WEIRD Lab</a>.
+            My research focuses on squeezing useful robot behavior out of cheap, abundant, and imperfect data.
+          </p>
+          <p>
+            Lately, I've been thinking about how to use simulation as a midtraining stage for robot policies.
+          </p>
+          <p class="callout">Applying to PhD programs this cycle &mdash; happy to chat about research fit or collaborations.</p>
+        </div>
         <ul class="links">
           <li><a href="mailto:ryu5@cs.washington.edu">email</a></li>
           <li><a href="https://scholar.google.com/citations?user=n9UhRCYAAAAJ&hl=en">scholar</a></li>
